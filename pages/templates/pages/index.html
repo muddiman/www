@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% load static %}
+    <!--     {% load static %} -->
     <meta charset="utf-8">
     <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
     <TITLE>Roger Clarke Profile Site</TITLE>
@@ -13,11 +13,21 @@
     <!-- <script src="{% static 'pages/scripts/scripts.js' %}"></script> -->
 
 <style>
+    .head {grid-area: header;}
+    .main {grid-area: main;}
+    .footer {grid-area: footer;}
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+          'header header header header header header'
+          'main main main main main main'
+          'footer footer footer footer footer footer';
+    }
     .topnav {
     overflow: hidden;
     background-color: #333;
     margin-left: 0%;
-    margin-right: 0px;
+    margin-right: 0px; 
     }
     .topnav a {
     float: left;
@@ -88,10 +98,10 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="grid-container">
 
-    </div>
-
+    
+    <div class="head">
     <div class="topnav" id="navbar">
             <a href="https://www.roger-clarke.com">Home</a>
             <a href="/pages/about.html">About</a>
@@ -101,6 +111,9 @@
             <a href="#" style="float:right">Register</a>
             <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
     </div>
+    </div> <!--End of header div-->
+
+    <div class="main">
     <div class="parallax" style="background-image: url('{% static "pages/img/css-code.jpg" %}')">
         <div class="container">
             <div class="caption">
@@ -156,8 +169,8 @@
           </div>
         </form>
       </div>
-
-
+    </div> <!--End of Main div-->
+      <div class="footer">
     <footer>
         <div class="container">
             <p>
@@ -168,5 +181,7 @@
             <p>Copyright &copy; 2018. All Rights Reserved. roger@roger-clarke.com</p>
         </div>
     </footer>
+    </div> <!--End of footer div-->
+    </div><!--End of grid-container div-->
 </body>
 </html>
