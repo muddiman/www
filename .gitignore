@@ -1,1 +1,3 @@
+# .gitignore
+# omit settings.py to conceal the security key
 django_project/settings.py
