@@ -57,19 +57,22 @@
     font-weight: bold;
     }
     #showcase {
-    background: #333;
     color: #fff;
-    padding: 40px;
-    opacity: 0.9;
+    padding-top: 125px;
     }
     #showcase button {
-    width: 10%;
-    padding:20px;
+    font-size: 20px;
+    width: 15%;
+    padding: 15px 32px;
     color: yellow;
     background:transparent;
-    border:5px;
-    border-color: green;
+    border: 2px solid #4CAF50;
     margin: 4px 2px;
+    border-radius: 12px;
+    }
+    #showcase button:hover {
+    background-color: #4CAF50;
+    color: #fff;
     }
     /* features */
     #features {
@@ -308,17 +311,27 @@
 
     <section id="parallax">
         <div class="main">
-            <div class="parallax" style="background-image: url('{% static "pages/img/css-code.jpg" %}')">
+            <div class="parallax" style="background-image: url('css-code.jpg')">
                 <div class="container" id="showcase">
-                    <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+                    <div class="row">
                         <div class="col-12">
                             <div class="caption">
-                                <p style="color:black">Go to my <a href="https://github.com/muddiman">github</a> to review the source code of my current projects</p>
-                                <a href="#features"><button>See More</button></a>
-                            </div>
+                               <!-- <p style="color:black">Go to my <a href="https://github.com/muddiman">github</a> to review the source code of my current projects</p>
+                                <button onclick="#features">See More</button>
+                            </div> -->
                         </div>
                     </div> 
-                </div> 
+                </div>
+                <div class="container" id="showcase">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="caption">
+                                    <p>Go to my <a href="https://github.com/muddiman">github</a> to review the source code of my current projects</p>
+                                    <button onclick="#features">See More</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>  
             </div>
         </div>
     </section>
@@ -360,7 +373,7 @@
         <form class="modal-content animate" action="/action_page.php">
           <div class="imgcontainer">
             <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="{% static 'pages/img/img_avatar2.png' %}" alt="Avatar" class="avatar">
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
           </div>
       
           <div class="container">
