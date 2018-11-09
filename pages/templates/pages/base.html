@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--     {% load static %} -->
+    {% load static %} 
     <meta charset="utf-8">
     <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
    
-    <TITLE>Roger Clarke Profile Site</TITLE>
+    <TITLE>{% block title %}{% end block %}</TITLE>
 
-    <!-- <script src="{% static 'pages/scripts/scripts.js' %}"></script> -->
+    <script src="{% static 'pages/scripts/scripts.js' %}"></script>
 </head>
 
 <body>    
@@ -31,7 +30,8 @@
      
     <!--    the main section   -->   
     <section id="main_page">
-     
+            {% block content %}
+            {% end block %}
     </section>
     
     <!-- Log In Form -->
@@ -39,7 +39,7 @@
         <form class="modal-content animate" action="/action_page.php">
           <div class="imgcontainer">
             <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            <img src="{% static '/pages/img/img_avatar2.png' %}" alt="Avatar" class="avatar">
           </div>
       
           <div class="container">
@@ -63,6 +63,7 @@
       </div>
     </div> <!--End of Main div-->
     
+    <!-- Page links section -->
     <section id="links">
         <div class="container">
             <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
@@ -100,6 +101,7 @@
         </div>
     </section> <!--End of the links section-->
     
+    <!-- footer section (legalese) -->
     <footer>
         <div class="container">
             <p>
