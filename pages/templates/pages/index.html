@@ -17,11 +17,64 @@
     * {
     box-sizing: border-box;
     }
+    .head .container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    border: none;
+    }
+    .head .container .row {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        display: inline;
+        border: none;
+    }
+    #logo {
+    align-content: left;
+    color:#4CAF50;
+    font-family: cursive;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 0px;
+    border: none;
+    }
+    #logo H1 {
+    font-size: 8vmin;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    }
+    #motto {
+    align-content: right;
+    color:rgb(26, 28, 179);
+    padding: 0;
+    padding-right: 10px;
+    margin: 0;
+    border: none;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    }
+    #motto H3 {
+        font-size: 4vmin;
+        text-align: right;
+        padding: 0;
+        margin: 0;
+        }
     .topnav {
     overflow: hidden;
     background-color: #333;
     margin-left: 0%;
-    margin-right: 0px; 
+    margin-right: 0px;
+    }
+    #navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     }
     .topnav a {
     float: left;
@@ -58,10 +111,11 @@
     }
     #showcase {
     color: #fff;
-    padding-top: 125px;
+    padding-top: 125px; 
     }
     #showcase button {
     font-size: 3vmin;
+    font-weight: bold;
     width: 15%;
     padding: 15px 32px;
     color: yellow;
@@ -83,9 +137,12 @@
     #features {
     margin:0;
     }
-    #features .fas .far {
+    #features .fa-3x {
     color: green;
     }
+    #features h3 {
+        color: green;
+        }
     /* Media Queries for Small Screens */
     .column {
     float: left;
@@ -93,8 +150,9 @@
     display: inline;
     }
     /* for tablets, laptops and desktops */
-    .col-4 {width:33.3%}
-    .col-12 {width:100%}
+    .col-4 {width:33.3%;}
+    .col-6 {width: 50%;}
+    .col-12 {width:100%;}
     /* for phones and small devices */
     @media only screen and (max-width: 768px) {
         /* For mobile phones: */
@@ -303,7 +361,14 @@
 
 <body>    
     <div class="head">
-        <div class="topnav" id="navbar">
+        <div class="container" id="head-contaner">
+            <div class="row">
+                <div class="column col-12" id=logo>
+                    <h1><span style="color:#f44336">Roger</span> Clarke</h1>
+                </div>
+            </div>
+        </div>
+        <div class="topnav sticky" id="navbar">
                 <a href="https://www.roger-clarke.com">Home</a>
                 <a href="/pages/about.html">About</a>
                 <a href="/blog/blog.html">Blog</a>
@@ -331,7 +396,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="caption">
-                                    <H2>Welcome to my coding journey!</H2>
+                                    <H2>Follow me on my coding journey!</H2>
                                     <button onclick="#features">See More</button>
                                 </div>
                             </div>
@@ -348,7 +413,7 @@
                 <div class="col-12">
                     <h1>Hi, I am Roger.</h1>
                     <H2>Thank you, for taking the time to view my site.</H2> 
-                    <H3>I would like to invite you to take a look at some of my projects.</H3>        
+                    <H2>I would like to invite you to take a look at some of my projects.</H2>        
                 </div>
                 <!-- icon row -->
                 <div class="row center-xs center-sm center-md center-lg">

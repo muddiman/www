@@ -6,11 +6,21 @@
 {% block content %}
     <h2>Contact</h2>
     <hr>
-
-    <!-- Name -->
-    <!-- Email -->
-    <!-- Text -->
-    <!-- Submit -->
+    <form>
+        <fieldset>
+            <!-- Name -->
+            Full Name:<br>
+            <input type="text" name="fullname">
+            <!-- Email -->
+            E-mail:<br>
+            <input type="email" name="email">
+            <!-- Text -->
+            Message:<br>
+            <textarea name="message" rows="10" cols="40">
+            <!-- Submit -->
+            <button type="button">SUBMIT</button>
+        </fieldset>
+    </form>
 
 
 {% end block %}
