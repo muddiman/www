@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--     {% load static %} -->
+    {% load static %} 
     <meta charset="utf-8">
     <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style1.css">
+   <!-- <link rel="stylesheet" type="text/css" href="style1.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <TITLE>Roger Clarke Profile Site</TITLE>
 
-    <!-- <script src="{% static 'pages/scripts/scripts.js' %}"></script> -->
-
+    <script src="{% static 'pages/scripts/scripts.js' %}"></script> 
+<!--
 <style>
     * {
     box-sizing: border-box;
@@ -285,6 +285,7 @@
         }
     }
 </style>
+-->
 <script>
     function clickOutsideForm() {
         var modal = document.getElementById('loginform');
@@ -317,7 +318,7 @@
 
     <section id="parallax">
         <div class="main">
-            <div class="parallax" style="background-image: url('css-code.jpg')">
+            <div class="parallax" style="background-image: url('{% static "pages/img/css-code.jpg" %}')">
                 <div class="container" id="showcase">
                     <div class="row">
                         <div class="col-12">
@@ -379,7 +380,7 @@
         <form class="modal-content animate" action="/action_page.php">
           <div class="imgcontainer">
             <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            <img src="{% static 'pages/img/img_avatar2.png' %}" alt="Avatar" class="avatar">
           </div>
       
           <div class="container">
