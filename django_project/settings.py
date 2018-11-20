@@ -44,6 +44,7 @@ ALLOWED_HOSTS = ip_addresses()
 # Application definition
 
 INSTALLED_APPS = (
+    'blog.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
