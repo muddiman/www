@@ -1,40 +1,40 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-    <!--     {% load static %} -->
     <meta charset="utf-8">
-    <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
+    <meta name="author" content=".muddicode" />
+    <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
    
-    <TITLE>Roger Clarke Profile Site</TITLE>
+    <TITLE>Roger Clarke Profile</TITLE>
 
-    <!-- <script src="{% static 'pages/scripts/scripts.js' %}"></script> -->
+    <script src="{% static 'pages/scripts/scripts.js' %}"></script>
 </head>
 
 <body>    
     <div class="head">
         <div class="topnav" id="navbar">
-                <a href="https://www.roger-clarke.com">Home</a>
-                <a href="/pages/about.html">About</a>
-                <a href="/blog/blog.html">Blog</a>
-                <a href="/pages/projects.html">Projects</a>
-                <a href="/pages/contact.html">Contact</a>
-                <a href="#" style="float:right">Register</a>
-                <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="#">Blog</a>
+            <a href="{% url 'projects' %}">Projects</a>
+            <a href="#" id="contact" onclick="loginForm()">Contact</a>
+            <a href="#" style="float:right" id="signup" onclick="loginForm()">Register</a>
+            <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
         </div>
     </div> <!--End of header div-->
 
-    
-     
+      
     <!--    the main section   -->   
     <section id="main_page">
         {% block content %}
         {% end block %}
     </section>
     
+
     <!-- Log In Form -->
     <div id="loginform" class="modal"> 
         <form class="modal-content animate" action="/action_page.php">
@@ -63,18 +63,21 @@
         </form>
       </div>
     </div> <!--End of Main div-->
+
+    <!-- Contact Me Form -->
+    <!-- Registration Form -->
     
     <section id="links">
         <div class="container">
-            <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
-                <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+            <div class="row">
+                <div class="col-12"></div>
+                <div class="row">
                     <div class="column col-4">
                         <h3>Follow Me</h3>
                         <ul>
                                 <li><a href="https://www.twitter.com/muddiman"><i class="fab fa-twitter fa-lg"> Twitter</i></a></li>
                                 <li><a href="https://www.facebook.com/muddiman"><i class="fab fa-facebook-f fa-lg"> Facebook</i></a></li>
-                                <li><a href="https://www.youtube.com/muddi100"><i class="fab fa-youtube fa-lg"> YouTube</i></a></li>
+                                <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg"> Linkedin</i></a></li>
                                 <li><a href="https://www.skype.com/muddi100"><i class="fab fa-skype fa-lg"> Skype</i></a></li>
                         </ul>
                     </div>
@@ -89,18 +92,18 @@
                     <div class="column col-4">
                         <h3>Links</h3>
                         <ul>
-                            <li><a href="https://www.roger-clarke.com"><i class="fas fa-home fa-lg"> Home</i></a></li>
-                            <li><a href="blog/blog.html"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
-                            <li><a href="pages/projects.html"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
-                            <li><a href="pages/contact.html"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
-                            <li><a href="pages/register.html"><i class="far fa-registered fa-lg"> Register</i></a></li>               
+                            <li><a href="{% url 'index' %}"><i class="fas fa-home fa-lg"> Home</i></a></li>
+                            <li><a href="#"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
+                            <li><a href="{% url 'projects' %}"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
+                            <li><a href="#" onclick="loginForm()"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
+                            <li><a href="#" onclick="loginForm()"><i class="far fa-registered fa-lg"> Register</i></a></li>               
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section> <!--End of the links section-->
-    
+
     <footer>
         <div class="container">
             <p>
