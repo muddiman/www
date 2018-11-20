@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--     {% load static %} -->
+    {% load static %}
     <meta charset="utf-8">
     <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  -->
@@ -72,7 +72,7 @@
     margin-right: 0px;
     }
     #navbar {
-    position: -webkit-sticky;
+    position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
     }
@@ -464,7 +464,7 @@
             <span class="psw">Forgot <a href="#">password?</a></span>
           </div>
         </form>
-      </div>
+    </div>
     </div> <!--End of Main div-->
     
     <section id="links">
