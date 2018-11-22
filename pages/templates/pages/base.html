@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
     <meta name="author" content=".muddicode" />
+    {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
    
@@ -18,9 +18,9 @@
     <div class="head">
         <div class="topnav" id="navbar">
             <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'about' %}">About</a>
-            <a href="#">Blog</a>
-            <a href="{% url 'projects' %}">Projects</a>
+            <a href="{% url 'pages-about' %}">About</a>
+            <a href="{% url 'blog-home' %}">Blog</a>
+            <a href="{% url 'pages-projects' %}">Projects</a>
             <a href="#" id="contact" onclick="loginForm()">Contact</a>
             <a href="#" style="float:right" id="signup" onclick="loginForm()">Register</a>
             <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
@@ -93,8 +93,8 @@
                         <h3>Links</h3>
                         <ul>
                             <li><a href="{% url 'index' %}"><i class="fas fa-home fa-lg"> Home</i></a></li>
-                            <li><a href="#"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
-                            <li><a href="{% url 'projects' %}"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
+                            <li><a href="{% url 'blog-home' %}"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
+                            <li><a href="{% url 'pages-projects' %}"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
                             <li><a href="#" onclick="loginForm()"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
                             <li><a href="#" onclick="loginForm()"><i class="far fa-registered fa-lg"> Register</i></a></li>               
                         </ul>
