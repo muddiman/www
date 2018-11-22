@@ -6,12 +6,10 @@
     <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
     <meta name="author" content=".muddicode" />
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}">  
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
    
     <TITLE>Roger Clarke Profile</TITLE>
-
-    <script src="{% static 'pages/scripts/scripts.js' %}"></script>
 </head>
 
 <body>    
@@ -40,7 +38,7 @@
         <form class="modal-content animate" action="/action_page.php">
           <div class="imgcontainer">
             <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            <img src="{% static 'blog/img_avatar2.png' %}" alt="Avatar" class="avatar">
           </div>
       
           <div class="container">
@@ -117,6 +115,6 @@
         </div>
     </footer>
     
-    
+    <script src="{% static 'blog/blog.js' %}"></script>
 </body>
 </html>
