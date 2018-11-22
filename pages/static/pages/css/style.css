@@ -67,7 +67,7 @@
     }
     /* Media Queries for Small Screens */
     .column {
-    float: left;
+    /* float: left; */
     padding: 10px;
     display: inline;
     }

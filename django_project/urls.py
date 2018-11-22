@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^pages/', include('pages.urls')),
+    url(r'^blog/', include('blog.urls')),
+
 ]
