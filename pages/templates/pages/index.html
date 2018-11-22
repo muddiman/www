@@ -308,9 +308,9 @@
     <div class="head">
         <div class="topnav" id="navbar">
                 <a href="https://www.roger-clarke.com">Home</a>
-                <a href="/pages/about.html">About</a>
-                <a href="/blog/blog.html">Blog</a>
-                <a href="/pages/projects.html">Projects</a>
+                <a href="{% url 'pages-about' %}">About</a>
+                <a href="{% url 'blog-home' %}">Blog</a>
+                <a href="{% url 'pages-projects' %}">Projects</a>
                 <a href="/pages/contact.html">Contact</a>
                 <a href="#" style="float:right">Register</a>
                 <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
@@ -431,8 +431,8 @@
                         <h3>Links</h3>
                         <ul>
                             <li><a href="https://www.roger-clarke.com"><i class="fas fa-home fa-lg"> Home</i></a></li>
-                            <li><a href="blog/blog.html"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
-                            <li><a href="pages/projects.html"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
+                            <li><a href="{% url 'blog-home' %}"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
+                            <li><a href="{% url 'pages-projects' %}"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
                             <li><a href="pages/contact.html"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
                             <li><a href="pages/register.html"><i class="far fa-registered fa-lg"> Register</i></a></li>               
                         </ul>
