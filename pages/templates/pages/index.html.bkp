@@ -1,0 +1,101 @@
+<DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    <title>Roger Clarke</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% static 'pages/scripts/scripts.js' %}"></script>
+<!--
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+-->
+
+</head>
+<body>
+    <div class="header">
+
+    </div>
+
+    <div class="topnav" id="navbar">
+            <a href="www.roger-clarke.com">Home</a>
+            <a href="/pages/about.html">About</a>
+            <a href="/blog/blog.html">Blog</a>
+            <a href="/pages/projects.html">Projects</a>
+            <a href="/pages/contacts.html">Contact</a>
+            <a href="#" style="float:right">Register</a>
+            <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
+    </div>
+    <div class="parallax">
+    <!-- <div class="container">
+            <div class="caption">
+                <form>
+                    <label for="email"><b>Email:</b></label>
+                    <input type="email" placeholder="j.doe@email.com" name="email">
+                    <button>JOIN</button>
+                </form>
+            </div>
+        </div>  -->
+    </div>
+    <div class="container">
+        <h1>Hi, I am Roger.</h1>
+        <H2>Thank you, for taking the time to view my site.</H2> 
+        <H3>I would like to invite you to take a look at some of my projects.</H3>        
+    </div>
+
+    <div class="row"> 
+        <!-- Three column content thatstack on top each other on smaller screens -->
+        <div class="column">
+            <h2>Source Code</h2>
+            <p>You can review the source code of my projects, at my <a href="https://github.com/muddiman">github repositories</a>.</p>
+        </div>
+        <div class="column">
+            <h2>Latest Posts</h2>
+            <p>The latest posts from my blog, with updates from my current and upcoming projects.</p>
+        </div>
+        <div class="column">
+            <h2>Contact Me</h2>
+            <p>Please feel free to contact me <a href="#">here</a> or email me at <a href="#">roger@roger-clarke.com</a>. </p>
+        </div>
+    </div>
+    <!-- Log In Form -->
+    <div id="loginform" class="modal"> 
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="{% static 'pages/img/img_avatar2.png' %}" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username:</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('loginform').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="#">Privacy</a> | <a href="#">Terms and Conditions</a>
+            </p>
+        </div>
+        <div>
+            <p>Copyright &copy; 2018. All Rights Reserved. roger@roger-clarke.com</p>
+        </div>
+    </footer>
+</body>
+</html>
