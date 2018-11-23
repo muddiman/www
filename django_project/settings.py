@@ -130,6 +130,7 @@ import netifaces
 
 # Find out what the IP addresses are at run time
 # This is necessary because otherwise Gunicorn will reject the connections
+"""
 def ip_addresses():
     ip_list = ['roger-clarke.com', 'www.roger-clarke.com', '68.183.104.20']
     for interface in netifaces.interfaces():
@@ -141,4 +142,4 @@ def ip_addresses():
 
 # Discover our IP address
 ALLOWED_HOSTS = ip_addresses()
-
+"""
