@@ -3,9 +3,21 @@
 django_project/settings.py
 
 # Django stuff:
-
 *.log
 
 local_settings.py
-
 db.sqlite3
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*~
+
+# Security: Secret Key
+key.txt
+
+# C extensions
+*.so
+
