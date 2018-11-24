@@ -13,3 +13,9 @@ def about(request):
 
 def projects(request):
     return render(request, 'pages/projects.html')
+
+def new_page(request):
+    return render(request, 'pages/new-page.html')
+
+def map(request):
+    return render(request, 'pages/map.html')

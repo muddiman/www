@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<!-- Landing Page -->
+<head>
+    <Title>Good Morning</Title>
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      body {
+    background-image: url('img/scene.jpg');
+    color: white;
+    font-family: "Microsoft YaHei UI Light",'Times New Roman', Times, serif;
+}
+#lock {
+    font-size: 200%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 5%;
+    margin-right: 5%;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+}
+#greeting {
+    border-bottom: 5px solid white;
+    font-size: 5vw;
+    font-weight: 600;
+    width: 40%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%; 
+    text-align: center;
+    background-color: rgba(74, 76, 78, 0.596);
+    border-radius: 50px;
+}
+/* make the clock large */
+#clockbox {
+    margin: 0;
+    font-family: monospace;
+    font-size: 12vw;
+    text-align: center;
+    width: 100%;
+    margin-top: 5%;
+    height: 100px;
+}
+#socialmedia {
+    position: fixed;
+    bottom: 0;
+    left: 5px;
+    font-size: 35px;
+    color: white;
+}
+#socialmedia i {
+    color: white;
+}
+#datebox {
+    font-family: "Microsoft YaHei UI Light",'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 600;
+    width: 75%;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+}
+/* adjustments for mobile screens */
+@media screen and (max-width: 650px) {
+    #greeting {
+        margin-top: 35%;
+        margin-left: 15%;
+        margin-right: 15%;
+        width: 60%; 
+        font-size: 8vw;
+    }
+    #clockbox {margin-top: 10%; font-weight: 900;}
+    #socialmedia {font-size: 5vw;}
+    #datebox {font-size: 5vw;}
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* styling for login form */
+ /* Extra styles for the cancel button */
+ .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 5px 12px 5px;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 0;
+    top: 0;
+    width: 400px; /* Full width */
+    height: 600px; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+label {
+    text-align: left;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+    </style>
+    <script>
+        var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+        function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+            var greet="";
+
+            if(nhour==0){ap=" AM";nhour=12;}
+            else if(nhour<12){ap=" AM";}
+            else if(nhour==12){ap=" PM";}
+            else if(nhour>12){ap=" PM";nhour-=12;}
+
+            if(ap===" AM"){greet="Morning";} 
+            if (ap===" PM") {greet="Day";}
+
+            if(nmin<=9) nmin="0"+nmin; // put zeros in front of single digit numbers
+            if(nsec<=9) nsec="0"+nsec;
+
+            var clocktext= ""+nhour+":"+nmin+":"+nsec+ap+"";
+            var datetext = ""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
+            var mygreeting = "Good " + greet + ", Roger.";
+            document.getElementById('datebox').innerHTML=datetext;
+            document.getElementById('clockbox').innerHTML=clocktext;
+            document.getElementById('greeting').innerHTML=mygreeting;
+
+            var t = setTimeout(GetClock, 500);
+        }
+        GetClock();
+    </script>
+    </head>
+
+    <body onload="GetClock()">
+        <div><a href="#"><i class="fas fa-lock" id="lock" onclick="loginForm()"></i></a></div>
+        <div id="greeting"></div>
+        <div id="clockbox"></div>
+        <div id="socialmedia">
+        <a href="https://www.facebook.com/muddiman"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com/muddiman"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.github.com/muddiman"><i class="fab fa-github"></i></a>
+        </div>
+        <div id="datebox"></div>
+        <!-- Log In Form -->
+        <div id="loginform" class="modal"> 
+            <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+        
+            <div class="container">
+                <label for="uname"><b>Username:</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+        
+                <label for="psw"><b>Password:</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                
+                <button type="submit">Login</button>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('loginform').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+            </form>
+        </div>     <!-- End of Log In Form -->
+
+    <script>   
+        function unlock() {
+            if(document.getElementById('loginform').style.display ==='none'){
+                document.getElementById('lock').classList.toggle('fa-lock');
+            } else {
+                document.getElementById('lock').classList.toggle('fa-lock-open');
+            } 
+        }
+
+        function clickOutsideForm() {
+            var modal = document.getElementById('loginform');
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        }
+
+        function loginForm() {
+            unlock();
+            var modal = document.getElementById('loginform');
+            modal.style.display = 'block';
+            clickOutsideForm();
+        }
+    </script>
+</body>
+</html>
