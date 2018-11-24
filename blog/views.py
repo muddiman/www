@@ -2,9 +2,10 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-
+from .models import Post
 # Create your views here.
 
+"""
 posts = [
     {
         'author': '.muddicode',
@@ -19,10 +20,11 @@ posts = [
         'date_posted': 'December 25, 2018'
     }
 ]
+"""
 
 def home(request):
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context)
 
