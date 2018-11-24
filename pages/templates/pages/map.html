@@ -84,9 +84,9 @@
   <div class="main-menu" id="menu">
     <button class="menu-btn" onclick="menuFunction()"></button>
     <div class="menu-content">
-      <a href="#">Projects</a>
-      <a href="#">About Me</a>
-      <a href="map.html">Map</a>
+      <a href="{% url 'pages-projects' %}">Projects</a>
+      <a href="{% url 'pages-about' %}">About Me</a>
+      <a href="{% url 'pages-map' %}">Map</a>
       <a href="#">Contact</a>
       <a href="#">Sign Up</a>
     </div>
@@ -95,10 +95,10 @@
   <!-- footer menu bar -->
   <div class="menu-bar">
     <i class="fas fa-bars" onclick="menuFunction()"></i>  
-    <i class="far fa-newspaper"></i>
-    <i class="fas fa-redo"></i>    
+    <a href="{% url 'blog-home' %}"><i class="far fa-newspaper"></i></a>
+    <a href="#"><i class="fas fa-redo"></i></a>    
     <i class="fas fa-lock" id="lock" onclick="unlock()"></i>
-    <i class="fas fa-home"></i>
+    <a href="{% url 'pages-new-page' %}"><i class="fas fa-home"></i></a>
   </div>
   <script>
             /**
