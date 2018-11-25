@@ -285,9 +285,9 @@
             <a href="{% url 'pages-about' %}">About</a>
             <a href="{% url 'blog-home' %}">Blog</a>
             <a href="{% url 'pages-projects' %}">Projects</a>
-            <a href="#" id="contact" onclick="loginForm()">Contact</a>
-            <a href="#" style="float:right" id="signup" onclick="loginForm()">Register</a>
-            <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
+            <a href="#" id="contact" onclick="form('contactform')">Contact</a>
+            <a href="#" style="float:right" id="signup" onclick="form('signupform')">Register</a>
+            <a href="#" style="float:right" id="login" onclick="form('loginform')">Log In</a>
         </div>
     </div> <!--End of header div-->
 
@@ -359,8 +359,8 @@
                             <li><a href="{% url 'index' %}"><i class="fas fa-home fa-lg"> Home</i></a></li>
                             <li><a href="{% url 'blog-home' %}"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
                             <li><a href="{% url 'pages-projects' %}"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
-                            <li><a href="#" onclick="loginForm()"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
-                            <li><a href="#" onclick="loginForm()"><i class="far fa-registered fa-lg"> Register</i></a></li>               
+                            <li><a href="#" onclick="form('contactform')"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
+                            <li><a href="#" onclick="form('signupform')"><i class="far fa-registered fa-lg"> Register</i></a></li>               
                         </ul>
                     </div>
                 </div>
@@ -380,8 +380,8 @@
     </footer>
     
     <script>
-      function clickOutsideForm() {
-        var modal = document.getElementById('loginform');
+      function clickOutsideForm(form) {
+        var modal = document.getElementById(form);
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
@@ -389,10 +389,10 @@
         };
       }
 
-      function loginForm() {
-        var modal = document.getElementById('loginform');
+      function form(formType) {
+        var modal = document.getElementById(formType);
         modal.style.display = 'block';
-        clickOutsideForm();
+        clickOutsideForm(formType);
       }
     </script>
 </body>
