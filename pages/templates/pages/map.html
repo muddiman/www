@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale-1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/map.css">
+  <script src="https://js.arcgis.com/4.9/"></script>
+  <title>Map</title>
+  <style>
+        html, body, #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Menu Styling */
+    /* menu container */
+    .main-menu {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        bottom: 75px;
+    }
+    .main-menu .menu-btn {
+        border: none;
+        background-color: inherit;
+    }
+    /* menu content. hidden by default */
+    .menu-content {
+        background-color: rgba(0, 0, 0, 0.623);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.692);
+    }
+    /* Links inside main menu */
+    .menu-content a {
+        float: none;
+        color: white;
+        padding: 6px 8px;
+        text-decoration: none;
+        text-align: left;
+        font-weight: 600;
+        display: block;
+    }
+    .menu-content a:hover {
+        background-color: gray;
+    }
+    /* JS to add class="show" to main menu container when click on button */
+    .show {display:block}
+    .menu-bar {
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0px 2px 8px 6px rgba(0,0,0,0.2);
+        z-index: 1; 
+    }
+    .fas, .far {
+        float: left;
+        text-align: center;
+        font-size: 30px;
+        color: green;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 20%;
+    }
+    /* change hover to active */
+    .fas:hover, .far:hover {
+        background-color: green;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Map Section -->
+  <div id="viewDiv"></div>
+
+  <!-- Main Menu -->
+  <div class="main-menu" id="menu">
+    <button class="menu-btn" onclick="menuFunction()"></button>
+    <div class="menu-content">
+      <a href="{% url 'pages-projects' %}">Projects</a>
+      <a href="{% url 'pages-about' %}">About Me</a>
+      <a href="{% url 'pages-map' %}">Map</a>
+      <a href="#">Contact</a>
+      <a href="#">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- footer menu bar -->
+  <div class="menu-bar">
+    <i class="fas fa-bars" onclick="menuFunction()"></i>  
+    <a href="{% url 'blog-home' %}"><i class="far fa-newspaper"></i></a>
+    <a href="#"><i class="fas fa-redo"></i></a>    
+    <i class="fas fa-lock" id="lock" onclick="unlock()"></i>
+    <a href="{% url 'pages-new-page' %}"><i class="fas fa-home"></i></a>
+  </div>
+  <script>
+            /**
+        * lock function
+        * toggles between "lock/unlock"
+        */
+        function unlock() {
+            document.getElementById('lock').classList.toggle('fa-lock');
+            document.getElementById('lock').classList.toggle('fa-lock-open');
+        }
+
+        /**
+        * "main-menu script"
+        * Toggle between "hiding" and "showing" the main menu
+        */
+        function menuFunction() {
+            document.getElementById('menu').classList.toggle('show');
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('#menu-btn')) {
+        
+            var dropdowns = document.getElementsByClassName("menu-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+                }
+            }
+            }
+        };
+  </script>
+
+  <script>
+        require([
+        "esri/Map", 
+        "esri/views/MapView"
+    ], function(Map, MapView) {
+        // code to create the map and a basemap will go here
+        var map = new Map({
+            basemap: "streets"
+        });
+        var view = new MapView({
+            container: "viewDiv",
+            map: map,
+            zoom: 15,
+            center: [-61.28, 10.62]
+        });
+    });
+  </script>
+</body>
+</html>

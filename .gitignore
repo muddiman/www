@@ -1,5 +1,6 @@
 # .gitignore
 # omit settings.py to conceal the security key
+<<<<<<< HEAD
 django_project/settings.py
 
 # Django stuff:
@@ -21,3 +22,7 @@ key.txt
 # C extensions
 *.so
 
+=======
+# roger
+django_project/settings.py
+>>>>>>> bug-fix

@@ -21,4 +21,9 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^pages/', include('pages.urls')),
+<<<<<<< HEAD
+=======
+    url(r'^blog/', include('blog.urls')),
+
+>>>>>>> bug-fix
 ]

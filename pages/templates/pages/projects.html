@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--  Details of my programming projects  -->
 {% extends "base.html" %}
 
@@ -45,3 +46,17 @@
     <h3>Microcontroller Project</h3>
     <p> Written in Assembly.</p>
 {% end block %}
+=======
+{% extends "pages/base.html" %}
+
+{% block header %}
+  <title> Roger's Projects</title>
+{% endblock header %}
+
+{% block content %}
+  <h1>Projects</h1>
+  <hr>
+  <a href="{% url 'pages-new-page' %}"><h5>Mobile friendly website update</h5></a>
+  <a href="{% url 'pages-map' %}"><h5>w/mapping capabilities</h5></a>
+{% endblock %}
+>>>>>>> bug-fix
