@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+<!-- Landing Page -->
 <head>
+<<<<<<< HEAD
 <<<<<<< HEAD
     {% load static %}
 =======
@@ -126,15 +128,59 @@
     border: 2px solid #4CAF50;
     margin: 4px 2px;
     border-radius: 12px;
+=======
+    <Title>Good Morning</Title>
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+    body {
+        background-image: url('https://breathtakinglandscapes.files.wordpress.com/2013/02/breathtaking-landscapes-23-wallpapers-country-hills-2.jpg');
+        color: white;
+        font-family: "Microsoft YaHei UI Light",'Times New Roman', Times, serif;
     }
-    #showcase button:hover {
-    background-color: #4CAF50;
-    color: #fff;
+    #lock {
+        font-size: 200%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-top: 5%;
+        margin-right: 5%;
+        padding: 0;
+        color: white;
+        text-decoration: none;
+>>>>>>> bug-fix
     }
-    /* features */
-    #features {
-    margin:0;
+    #lock:hover {
+        color: green;
     }
+    #greeting {
+        border-bottom: 5px solid white;
+        font-size: 5vw;
+        font-weight: 600;
+        width: 40%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 5%;
+        margin-left: 25%;
+        margin-right: 25%; 
+        text-align: center;
+        background-color: rgba(74, 76, 78, 0.596);
+        border-radius: 50px;
+    }
+    /* make the clock large */
+    #clockbox {
+        margin: 0;
+        font-family: monospace;
+        font-size: 12vw;
+        text-align: center;
+        width: 100%;
+        margin-top: 5%;
+        height: 100px;
+    }
+<<<<<<< HEAD
     #features .fa-3x {
     color: green;
     }
@@ -158,61 +204,51 @@
     @media only screen and (max-width: 768px) {
         /* For mobile phones: */
         [class*="col-"] {
+=======
+    #socialmedia {
+        position: fixed;
+        bottom: 0;
+        left: 5px;
+        font-size: 35px;
+        color: white;
+    }
+    #socialmedia i {
+        color: white;
+    }
+    #datebox {
+        font-family: "Microsoft YaHei UI Light",'Times New Roman', Times, serif;
+        font-size: 35px;
+        font-weight: 600;
+        width: 75%;
+        text-align: right;
+        position: fixed;
+        bottom: 0;
+        right: 10px;
+    }
+    /* adjustments for mobile screens */
+    @media screen and (max-width: 650px) {
+        #greeting {
+            margin-top: 35%;
+            margin-left: 15%;
+            margin-right: 15%;
+            width: 60%; 
+            font-size: 8vw;
+        }
+        #clockbox {margin-top: 10%; font-weight: 900;}
+        #socialmedia {
+            font-size: 12vw;
+>>>>>>> bug-fix
             width: 100%;
+            text-align: center;
+            
+        }
+        #datebox {
+            font-size: 5vw;
+            top: 0;
+            left: 5px;
         }
     }
-    .row {
-    padding: 0px;
-    margin:0;
-    }
-    .row::after {
-    content: "";
-    display: table;
-    clear: both;
-    }
-    #links {
-    background-color: #333;
-    color: #f1f1f1;
-    text-align: left;
-    }
-    #links H3 {
-    text-transform: uppercase;
-    color: red;
-    }
-    #links .column {
-    padding-left:90px;
-    padding-right:90px;
-    }
-    #links ul  {
-    padding: 0px;
-    list-style: none;
-    }
-    #links li {
-    padding-bottom: 5px;
-    padding-top: 5px;
-    }
-    #links li a {
-    color: white;
-    }
-    h1 {
-    text-align: center;
-    }
-    footer {
-        color: rgb(163, 163, 163);
-        background-color: black;
-        padding: 5px;
-    }
-    footer a {
-        color: rgb(163, 163, 163);
-        text-decoration: none;
-    }
-    footer a:hover {
-        color: #f2f2f2;
-    }
-    footer p {
-        padding-bottom: 3px;
-    }
-    
+
     /* Full-width input fields */
     input[type=text], input[type=password] {
         width: 100%;
@@ -222,7 +258,7 @@
         border: 1px solid #ccc;
         box-sizing: border-box;
     }
-    
+
     /* Set a style for all buttons */
     button {
         background-color: #4CAF50;
@@ -233,45 +269,36 @@
         cursor: pointer;
         width: 100%;
     }
-    
-    button:hover {
-        opacity: 0.8;
-    }
-    /*
-    .caption {
-        width: auto;
-        padding: 35%;
-    }
-    */
-    
+
+    /* styling for login form */
     /* Extra styles for the cancel button */
     .cancelbtn {
         width: auto;
         padding: 10px 18px;
         background-color: #f44336;
     }
-    
+
     /* Center the image and position the close button */
     .imgcontainer {
         text-align: center;
         margin: 24px 5px 12px 5px;
         position: relative;
     }
-    
+
     img.avatar {
         width: 40%;
         border-radius: 50%;
     }
-    
+
     .container {
         padding: 16px;
     }
-    
+
     span.psw {
         float: right;
         padding-top: 16px;
     }
-    
+
     /* The Modal (background) */
     .modal {
         display: none; /* Hidden by default */
@@ -287,8 +314,9 @@
         padding-top: 30px;
         padding-bottom: 30px;
         padding-left: 80px;
+        color: black;
     }
-    
+
     /* Modal Content/Box */
     .modal-content {
         background-color: #fefefe;
@@ -296,7 +324,11 @@
         border: 1px solid #888;
         width: 80%; /* Could be more or less, depending on screen size */
     }
-    
+    .modal-content p {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
     /* The Close Button (x) */
     .close {
         position: absolute;
@@ -309,19 +341,19 @@
     label {
         text-align: left;
     }
-    
+
     .close:hover,
     .close:focus {
         color: red;
         cursor: pointer;
     }
-    
+
     /* Add Zoom Animation */
     .animate {
         -webkit-animation: animatezoom 0.6s;
         animation: animatezoom 0.6s
     }
-    
+
     @-webkit-keyframes animatezoom {
         from {-webkit-transform: scale(0)} 
         to {-webkit-transform: scale(1)}
@@ -331,21 +363,23 @@
         from {transform: scale(0)} 
         to {transform: scale(1)}
     }
-    
+
     /* Change styles for span and cancel button on extra small screens */
     @media screen and (max-width: 300px) {
         span.psw {
-           display: block;
-           float: none;
+        display: block;
+        float: none;
         }
         .cancelbtn {
-           width: 100%;
+        width: 100%;
         }
     }
     </style>
-    <TITLE>Roger Clarke Page</TITLE>
-</head>
+    <script>
+        var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
 
+<<<<<<< HEAD
 <body>    
     <div class="head">
 <<<<<<< HEAD
@@ -450,13 +484,56 @@
     </section>
  </section>
     
+=======
+        function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+            var greet="";
 
+            if(nhour==0){ap=" AM";nhour=12;}
+            else if(nhour<12){ap=" AM";}
+            else if(nhour==12){ap=" PM";}
+            else if(nhour>12){ap=" PM";nhour-=12;}
+>>>>>>> bug-fix
+
+            if(ap===" AM"){greet="Morning";} 
+            if (ap===" PM") {greet="Day";}
+
+            if(nmin<=9) nmin="0"+nmin; // put zeros in front of single digit numbers
+            if(nsec<=9) nsec="0"+nsec;
+
+            var clocktext= ""+nhour+":"+nmin+":"+nsec+ap+"";
+            var datetext = ""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
+            var mygreeting = "Good " + greet + ", Roger.";
+            document.getElementById('datebox').innerHTML=datetext;
+            document.getElementById('clockbox').innerHTML=clocktext;
+            document.getElementById('greeting').innerHTML=mygreeting;
+
+            var t = setTimeout(GetClock, 500);
+        }
+        GetClock();
+    </script>
+    </head>
+
+<body onload="GetClock()">
+    <div>
+      <a href="#"><i class="fas fa-lock lock" id="lock" title="Login here to ENTER" onclick="loginForm()"></i></a>
+    </div>    
+    <div id="greeting"></div>
+    <div id="clockbox"></div>
+    <div id="socialmedia">
+      <a href="https://www.facebook.com/muddiman"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.twitter.com/muddiman"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.github.com/muddiman"><i class="fab fa-github"></i></a>
+    </div>
+    <div id="datebox"></div>
     <!-- Log In Form -->
     <div id="loginform" class="modal"> 
         <form class="modal-content animate" action="/action_page.php">
           <div class="imgcontainer">
             <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png" alt="Avatar" class="avatar">
           </div>
       
           <div class="container">
@@ -471,12 +548,13 @@
               <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
           </div>
-      
-          <div class="container" style="background-color:#f1f1f1">
+          <p>Don't have an account? Sign up <a href="#">here</a>.</p>
+          <div class="container" id="lower_card_div" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('loginform').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+            <span class="psw">Forgot <a href="{% url 'pages-landing-page' %}">password?</a></span>
           </div>
         </form>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
 =======
@@ -485,71 +563,34 @@
 
     <!-- Contact Me Form -->
     <!-- Registration Form -->
+=======
+    </div>     <!-- End of Log In Form -->
+>>>>>>> bug-fix
 
-    <!-- Links Section -->
-    <section id="links">
-        <div class="container">
-            <div class="row">
-                <div class="col-12"></div>
-                <div class="row">
-                    <div class="column col-4">
-                        <h3>Follow Me</h3>
-                        <ul>
-                                <li><a href="https://www.twitter.com/muddiman"><i class="fab fa-twitter fa-lg"> Twitter</i></a></li>
-                                <li><a href="https://www.facebook.com/muddiman"><i class="fab fa-facebook-f fa-lg"> Facebook</i></a></li>
-                                <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg"> Linkedin</i></a></li>
-                                <li><a href="https://www.skype.com/muddi100"><i class="fab fa-skype fa-lg"> Skype</i></a></li>
-                        </ul>
-                    </div>
-                    <div class="column col-4">
-                        <h3>Contact</h3>
-                        <ul>
-                            <li><a href="#"><i class="far fa-map fa-lg"> Address: </i>#9 Whatever Lane, Anytown.</a></li>
-                            <li><a href="#"><i class="fas fa-phone-volume fa-lg"> Phone: </i> (555) 555-5555</a></li>
-                            <li><a href="#"><i class="fas fa-at fa-lg"> Email: </i>me@roger-clarke.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="column col-4">
-                        <h3>Links</h3>
-                        <ul>
-                            <li><a href="{% url 'index' %}"><i class="fas fa-home fa-lg"> Home</i></a></li>
-                            <li><a href="{% url 'blog-home' %}"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
-                            <li><a href="{% url 'pages-projects' %}"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
-                            <li><a href="#" onclick="loginForm()"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
-                            <li><a href="#" onclick="loginForm()"><i class="far fa-registered fa-lg"> Register</i></a></li>               
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> <!--End of the links section-->
+    <script>   
+        function unlock() {
+            if(document.getElementById('loginform').style.display ==='none'){
+                document.getElementById('lock').classList.toggle('fa-lock');
+            } else {
+                document.getElementById('lock').classList.toggle('fa-lock-open');
+            } 
+        }
 
-    <footer>
-        <div class="container">
-            <p>
-                <a href="#">Privacy</a> | <a href="#">Terms and Conditions</a>
-            </p>
-        </div>
-        <div>
-            <p>Copyright &copy; 2018 Roger A. Clarke. All Rights Reserved. me@roger-clarke.com</p>
-        </div>
-    </footer>
-    
-    <script>
-      function clickOutsideForm() {
-        var modal = document.getElementById('loginform');
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        };
-      }
+        function clickOutsideForm() {
+            var modal = document.getElementById('loginform');
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        }
 
-      function loginForm() {
-        var modal = document.getElementById('loginform');
-        modal.style.display = 'block';
-        clickOutsideForm();
-      }
+        function loginForm() {
+            unlock();
+            var modal = document.getElementById('loginform');
+            modal.style.display = 'block';
+            clickOutsideForm();
+        }
     </script>
 </body>
 </html>
