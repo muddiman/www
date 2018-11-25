@@ -1,9 +1,36 @@
 # .gitignore
 # omit settings.py to conceal the security key
+<<<<<<< HEAD
+django_project/settings.py
+
+# Django stuff:
+*.log
+
+local_settings.py
+db.sqlite3
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*~
+
+# Security: Secret Key
+key.txt
+
+# C extensions
+*.so
+
+=======
 # roger
+<<<<<<< HEAD
 <<<<<<< HEAD
 django_project/settings.py
 =======
 django_project/settings.py
 *.pyc
+=======
+django_project/settings.py
+>>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
 >>>>>>> bug-fix

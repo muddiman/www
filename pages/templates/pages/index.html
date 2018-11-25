@@ -3,20 +3,22 @@
 <!-- Landing Page -->
 <head>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
     {% load static %}
+=======
+>>>>>>> bug-fix
     <meta charset="utf-8">
-    <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <TITLE>Roger Clarke Profile Site</TITLE>
-
-    <!-- <script src="{% static 'pages/scripts/scripts.js' %}"></script> -->
-
-<style>
-    * {
+    <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
+    <meta name="author" content=".muddicode" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      * {
     box-sizing: border-box;
     }
     .head .container {
@@ -90,7 +92,7 @@
     color: black;
     }
     .parallax {
-    background-image: url("css-code.jpg");
+    background-image: url("http://static4.businessinsider.com/image/56b4b72d6e97c622048b51af-2190-1643/4653088356_e4b0de881c_o.jpg");
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -101,7 +103,7 @@
     background-color: rgb(255, 254, 251);
     text-align: center;
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Microsoft YaHei;
     font-size: small;
     }
     body a {
@@ -116,8 +118,12 @@
     padding-top: 125px; 
     }
     #showcase button {
+<<<<<<< HEAD
     font-size: 3vmin;
     font-weight: bold;
+=======
+    font-size: 20px;
+>>>>>>> bug-fix
     width: 15%;
     padding: 15px 32px;
     color: yellow;
@@ -135,7 +141,10 @@
         background-image: url('https://breathtakinglandscapes.files.wordpress.com/2013/02/breathtaking-landscapes-23-wallpapers-country-hills-2.jpg');
         color: white;
         font-family: "Microsoft YaHei UI Light",'Times New Roman', Times, serif;
+<<<<<<< HEAD
 >>>>>>> bug-fix
+=======
+>>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
     }
     #lock {
         font-size: 200%;
@@ -147,6 +156,7 @@
         padding: 0;
         color: white;
         text-decoration: none;
+>>>>>>> bug-fix
     }
     #lock:hover {
         color: green;
@@ -186,13 +196,16 @@
         }
     /* Media Queries for Small Screens */
     .column {
-    float: left;
-    padding: 10px;
-    display: inline;
+    float: left; 
+    padding: 0;
+    /* display: inline; */
     }
     /* for tablets, laptops and desktops */
     .col-4 {width:33.3%;}
+<<<<<<< HEAD
     .col-6 {width: 50%;}
+=======
+>>>>>>> bug-fix
     .col-12 {width:100%;}
     /* for phones and small devices */
     @media only screen and (max-width: 768px) {
@@ -373,6 +386,7 @@
         var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
         var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
 
+<<<<<<< HEAD
         function GetClock(){
             var d=new Date();
             var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
@@ -390,9 +404,12 @@
             if(nmin<=9) nmin="0"+nmin; // put zeros in front of single digit numbers
             if(nsec<=9) nsec="0"+nsec;
 
+=======
+>>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
 <<<<<<< HEAD
 <body>    
     <div class="head">
+<<<<<<< HEAD
         <div class="container" id="head-contaner">
             <div class="row">
                 <div class="column col-12" id=logo>
@@ -408,12 +425,26 @@
                 <a href="/pages/contact.html">Contact</a>
                 <a href="#" style="float:right">Register</a>
                 <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
+=======
+        <div class="topnav" id="navbar">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'pages-about' %}">About</a>
+            <a href="{% url 'blog-home' %}">Blog</a>
+            <a href="{% url 'pages-projects' %}">Projects</a>
+            <a href="#" id="contact" onclick="loginForm()">Contact</a>
+            <a href="#" style="float:right" id="signup" onclick="loginForm()">Register</a>
+            <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
+>>>>>>> bug-fix
         </div>
     </div> <!--End of header div-->
+      
+    <!--    the main section   -->   
+    <section id="main_page">
 
+<H1>ROGER CLARKE</H1>
     <section id="parallax">
         <div class="main">
-            <div class="parallax" style="background-image: url('css-code.jpg')">
+            <div class="parallax" style="background-image: url('{% static "pages/img/css-code.jpg" %}')">
                 <div class="container" id="showcase">
                     <div class="row">
                         <div class="col-12">
@@ -425,15 +456,24 @@
                     </div> 
                 </div>
                 <div class="container" id="showcase">
+<<<<<<< HEAD
                         <div class="row">
                             <div class="col-12">
                                 <div class="caption">
                                     <H2>Follow me on my coding journey!</H2>
                                     <button onclick="#features">See More</button>
                                 </div>
+=======
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="caption">
+                                <H2>Welcome to my coding journey!</H2>
+                                <button onclick="#features">See More</button>
+>>>>>>> bug-fix
                             </div>
-                        </div> 
-                    </div>  
+                        </div>
+                    </div> 
+                </div>  
             </div>
         </div>
     </section>
@@ -469,8 +509,30 @@
             </div>
         </div>
     </section>
+ </section>
     
 =======
+<<<<<<< HEAD
+=======
+        function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+            var greet="";
+
+            if(nhour==0){ap=" AM";nhour=12;}
+            else if(nhour<12){ap=" AM";}
+            else if(nhour==12){ap=" PM";}
+            else if(nhour>12){ap=" PM";nhour-=12;}
+>>>>>>> bug-fix
+
+            if(ap===" AM"){greet="Morning";} 
+            if (ap===" PM") {greet="Day";}
+
+            if(nmin<=9) nmin="0"+nmin; // put zeros in front of single digit numbers
+            if(nsec<=9) nsec="0"+nsec;
+
+>>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
             var clocktext= ""+nhour+":"+nmin+":"+nsec+ap+"";
             var datetext = ""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
             var mygreeting = "Good " + greet + ", Roger.";
@@ -496,7 +558,10 @@
       <a href="https://www.github.com/muddiman"><i class="fab fa-github"></i></a>
     </div>
     <div id="datebox"></div>
+<<<<<<< HEAD
 >>>>>>> bug-fix
+=======
+>>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
     <!-- Log In Form -->
     <div id="loginform" class="modal"> 
         <form class="modal-content animate" action="/action_page.php">
@@ -524,8 +589,15 @@
           </div>
         </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
     </div>
+=======
+>>>>>>> bug-fix
     </div> <!--End of Main div-->
+<<<<<<< HEAD
     
     <section id="links">
         <div class="container">
@@ -577,7 +649,13 @@
     
     
 =======
+
+    <!-- Contact Me Form -->
+    <!-- Registration Form -->
+>>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
+=======
     </div>     <!-- End of Log In Form -->
+>>>>>>> bug-fix
 
     <script>   
         function unlock() {
@@ -604,6 +682,9 @@
             clickOutsideForm();
         }
     </script>
+<<<<<<< HEAD
 >>>>>>> bug-fix
+=======
+>>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
 </body>
 </html>
