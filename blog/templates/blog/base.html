@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
+    <meta name="author" content=".muddicode" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+   
+    {% block header %}
+    {% endblock header %}
+</head>
+
+<body>    
+    <div class="head">
+        <div class="topnav" id="navbar">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'pages-about' %}">About</a>
+            <a href="{% url 'blog-home' %}">Blog</a>
+            <a href="{% url 'pages-projects' %}">Projects</a>
+            <a href="#" id="contact" onclick="loginForm()">Contact</a>
+            <a href="#" style="float:right" id="signup" onclick="loginForm()">Register</a>
+            <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
+        </div>
+    </div> <!--End of header div-->
+
+      
+    <!--    the main section   -->   
+    <section id="main_page">
+        {% block content %}
+        {% endblock content %}
+    </section>
+    
+
+    <!-- Log In Form -->
+    <div id="loginform" class="modal"> 
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="{% static 'blog/img_avatar2.png' %}" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username:</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('loginform').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+
+    </div> <!--End of Main div-->
+
+    <!-- Contact Me Form -->
+    <!-- Registration Form -->
+
+    <!-- Links Section -->
+    <section id="links">
+        <div class="container">
+            <div class="row">
+                <div class="col-12"></div>
+                <div class="row">
+                    <div class="column col-4">
+                        <h3>Follow Me</h3>
+                        <ul>
+                                <li><a href="https://www.twitter.com/muddiman"><i class="fab fa-twitter fa-lg"> Twitter</i></a></li>
+                                <li><a href="https://www.facebook.com/muddiman"><i class="fab fa-facebook-f fa-lg"> Facebook</i></a></li>
+                                <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg"> Linkedin</i></a></li>
+                                <li><a href="https://www.skype.com/muddi100"><i class="fab fa-skype fa-lg"> Skype</i></a></li>
+                        </ul>
+                    </div>
+                    <div class="column col-4">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="#"><i class="far fa-map fa-lg"> Address: </i>#9 Whatever Lane, Anytown.</a></li>
+                            <li><a href="#"><i class="fas fa-phone-volume fa-lg"> Phone: </i> (555) 555-5555</a></li>
+                            <li><a href="#"><i class="fas fa-at fa-lg"> Email: </i>me@roger-clarke.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="column col-4">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="{% url 'index' %}"><i class="fas fa-home fa-lg"> Home</i></a></li>
+                            <li><a href="{% url 'blog-home' %}"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
+                            <li><a href="{% url 'pages-projects' %}"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
+                            <li><a href="#" onclick="loginForm()"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
+                            <li><a href="#" onclick="loginForm()"><i class="far fa-registered fa-lg"> Register</i></a></li>               
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!--End of the links section-->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>
+                <a href="#">Privacy</a> | <a href="#">Terms and Conditions</a>
+            </p>
+        </div>
+        <div>
+            <p>Copyright &copy; 2018. All Rights Reserved. me@roger-clarke.com</p>
+        </div>
+    </footer>
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+</html>
