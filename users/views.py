@@ -16,4 +16,4 @@ def register(request):
 			return redirect('pages-landing-page')
 	else:
 		form = UserRegisterForm()
-	return render(request, 'users/register.html', {'form': form})
+		return render(request, 'users/register.html', {'form': form})
