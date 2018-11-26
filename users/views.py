@@ -10,8 +10,9 @@ def register(request):
 	if request.method == 'POST':
 		form = UserCreationForm(request.POST)
 		if form.is_valid():
+			form.save()
 			username = form.cleaned_data.get('username')
-			messages.success(request, 'Account created for '+ {username}+'!')
+			messages.success(request, 'Account created for {username}!')
 			return redirect('pages-landing-page')
 	else:
 		form = UserCreationForm()
