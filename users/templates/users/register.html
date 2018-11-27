@@ -1,7 +1,7 @@
 {% extends "pages/base.html" %}
 {% block content %}
 	<h1>Register Your Account</h1>
-	<div class="content-section">
+	<div class="registration">
 		<form method="POST">
 			{% csrf_token %}
 			<fieldset class="form-group">
@@ -12,7 +12,7 @@
 				<button class="btn" type="submit">Sign Up</button>
 			</div>
 		</form>
-		<div class="border-top">
+		<div class="sign-in_section">
 			<small class="text-muted">Already have an account? <a href="{% url 'login' %}">log in</a></small>
 		</div>
 	</div>
