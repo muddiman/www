@@ -284,7 +284,7 @@
 <body>    
     <div class="head">
         <div class="topnav" id="navbar">
-            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'pages-landing-page' %}">Home</a>
             <a href="{% url 'pages-about' %}">About</a>
             <a href="{% url 'blog-home' %}">Blog</a>
             <a href="{% url 'pages-projects' %}">Projects</a>
@@ -311,7 +311,7 @@
 
 
     <!-- Contact Me Form -->
-    
+
     <!-- Links Section -->
     <section id="links">
         <div class="container">
@@ -338,11 +338,11 @@
                     <div class="column col-4">
                         <h3>Links</h3>
                         <ul>
-                            <li><a href="{% url 'index' %}"><i class="fas fa-home fa-lg"> Home</i></a></li>
+                            <li><a href="{% url 'pages-landing-page' %}"><i class="fas fa-home fa-lg"> Home</i></a></li>
                             <li><a href="{% url 'blog-home' %}"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
                             <li><a href="{% url 'pages-projects' %}"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
                             <li><a href="#" onclick="form('contactform')"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
-                            <li><a href="{% url 'logout' %}">id="logout" >Logout</a></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
 
                         </ul>
                     </div>

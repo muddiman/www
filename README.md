@@ -3,7 +3,7 @@ WWW
 ### A Django project
 Serving static pages and a blog. User authentication available.
 
-#### VERSION: 1.1.2
+#### VERSION: 1.3.1
 ------
 First patch.
 Known bugs:
