@@ -53,6 +53,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'pages',
     'blog',
+    'users',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -146,3 +147,6 @@ def ip_addresses():
 # Discover our IP address
 ALLOWED_HOSTS = ip_addresses()
 """
+# redirect to landing page once logged in
+
+LOGIN_REDIRECT_URL = 'pages-landing-page'

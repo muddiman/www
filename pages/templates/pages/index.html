@@ -330,6 +330,7 @@
         margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
         border: 1px solid #888;
         width: 80%; /* Could be more or less, depending on screen size */
+        height: 85%;
     }
     .modal-content p {
         text-align: center;
@@ -564,28 +565,27 @@
 >>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
     <!-- Log In Form -->
     <div id="loginform" class="modal"> 
-        <form class="modal-content animate" action="/action_page.php">
+        <form class="modal-content animate" method="POST">
+        {% csrf_token %}
           <div class="imgcontainer">
             <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png" alt="Avatar" class="avatar">
           </div>
       
           <div class="container">
-            <label for="uname"><b>Username:</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password:</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-              
+            <fieldset>
+                <!--  <legend>Log In</legend>  -->
+                {{ form.as_p }}
+            </fieldset>             
             <button type="submit">Login</button>
             <label>
               <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
           </div>
-          <p>Don't have an account? Sign up <a href="#">here</a>.</p>
+          <p>Don't have an account? Sign up <a href="{% url 'register' %}">here</a>.</p>
           <div class="container" id="lower_card_div" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('loginform').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="{% url 'pages-landing-page' %}">password?</a></span>
+            <span class="psw">Forgot <a href="#">password?</a></span>
           </div>
         </form>
 <<<<<<< HEAD

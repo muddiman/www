@@ -1,9 +1,4 @@
-{% extends "blog/base.html" %}
-
-{% block header %}
-    <TITLE>Roger Clarke Blog</TITLE>
-    {% include "blog/includes/style-snippet.html" %}
-{% endblock header%}
+{% extends "pages/base.html" %}
 
 {% block content %}
     {% for post in posts %}
@@ -14,7 +9,3 @@
     <h2>Want to post your own articles to this blog?</h2>
     <h4>Click <a href="{% url 'blog-about' %}">here</a> for detailed instructions.</h4>
 {% endblock content %} 
-
-{% block scripts %}
-    {% include "blog/includes/scripts-snippet.html" %}
-{% endblock scripts%}
