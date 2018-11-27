@@ -296,7 +296,7 @@
 <H1>ROGER CLARKE</H1>
     <section id="parallax">
         <div class="main">
-            <div class="parallax" style="background-image: url('{% static "pages/img/css-code.jpg" %}')">
+            <div class="parallax">
                 <div class="container" id="showcase">
                     <div class="row">
                         <div class="col-12">
@@ -415,8 +415,8 @@
                             <li><a href="{% url 'index' %}"><i class="fas fa-home fa-lg"> Home</i></a></li>
                             <li><a href="{% url 'blog-home' %}"><i class="fas fa-rss fa-lg"> Blog</i></a></li>
                             <li><a href="{% url 'pages-projects' %}"><i class="fas fa-project-diagram fa-lg"> Projects</i></a></li>
-                            <li><a href="#" onclick="loginForm()"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
-                            <li><a href="#" onclick="loginForm()"><i class="far fa-registered fa-lg"> Register</i></a></li>               
+                            <li><a href="#" onclick="form('contactform')"><i class="far fa-envelope fa-lg"> Contact</i></a></li>
+                            <li><a href="#" onclick="form('registerform')"><i class="far fa-registered fa-lg"> Register</i></a></li>               
                         </ul>
                     </div>
                 </div>
