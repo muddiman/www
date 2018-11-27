@@ -20,7 +20,8 @@ from users import views as user_views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    url(r'^$', pages_views.index, name='index'),
+#    url(r'^$', pages_views.index, name='index'),
+    url(r'^$', auth_views.LoginView.as_view(template_name='pages/index.html'), name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^pages/', include('pages.urls')),
     url(r'^blog/', include('blog.urls')),
