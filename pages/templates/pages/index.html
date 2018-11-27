@@ -269,19 +269,18 @@
     <div id="datebox"></div>
     <!-- Log In Form -->
     <div id="loginform" class="modal"> 
-        <form class="modal-content animate" action="/action_page.php">
+        <form class="modal-content animate" method="POST">
+        {% csrf_token %}
           <div class="imgcontainer">
             <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png" alt="Avatar" class="avatar">
           </div>
       
           <div class="container">
-            <label for="uname"><b>Username:</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password:</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-              
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Log In</legend>
+                    {{ form.as_p }}
+                </fieldset>             
             <button type="submit">Login</button>
             <label>
               <input type="checkbox" checked="checked" name="remember"> Remember me
