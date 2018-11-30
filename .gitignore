@@ -3,3 +3,7 @@
 # roger
 django_project/settings.py
 **/*.pyc
+
+settings.py
+
+key.txt
