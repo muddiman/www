@@ -2,4 +2,4 @@
 # omit settings.py to conceal the security key
 # roger
 django_project/settings.py
-*.pyc
+**/*.pyc
