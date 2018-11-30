@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/1.8/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
+testing roger.
 """
 # https://www.roger-clarke.com
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -17,7 +18,7 @@ import netifaces
 # Find out what the IP addresses are at run time
 # This is necessary because otherwise Gunicorn will reject the connections
 def ip_addresses():
-    ip_list = []
+    ip_list = ['roger-clarke.com', 'www.roger-clarke.com', '68.183.104.20']
     for interface in netifaces.interfaces():
         addrs = netifaces.ifaddresses(interface)
         for x in (netifaces.AF_INET, netifaces.AF_INET6):
@@ -50,7 +51,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pages'
+    'pages',
+    'blog',
+    'users',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,7 +108,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Port_of_Spain'
 
 USE_I18N = True
 
@@ -118,7 +121,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = "/home/django/django_project/static"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+# STATICFILES_DIRS = [
+#   os.path.join(BASE_DIR, "static"),
+# ]
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # Allow Django from all hosts. This snippet is installed from
 # /var/lib/digitalocean/allow_hosts.py
@@ -128,6 +134,7 @@ import netifaces
 
 # Find out what the IP addresses are at run time
 # This is necessary because otherwise Gunicorn will reject the connections
+"""
 def ip_addresses():
     ip_list = ['roger-clarke.com', 'www.roger-clarke.com', '68.183.104.20']
     for interface in netifaces.interfaces():
@@ -139,4 +146,7 @@ def ip_addresses():
 
 # Discover our IP address
 ALLOWED_HOSTS = ip_addresses()
+"""
+# redirect to landing page once logged in
 
+LOGIN_REDIRECT_URL = 'pages-landing-page'

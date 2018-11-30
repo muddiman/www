@@ -1,0 +1,28 @@
+    <!-- Registration Form -->
+    <div id="signupform" class="modal"> 
+        <form class="modal-content animate" action="/action_page.php">
+      
+          <div class="container">
+            <label for="email"><b>Email Address:</b></label>
+            <input type="text" placeholder="Enter yourEmail@example.com" name="email" required>
+
+            <label for="fullname"><b>Full Name:</b></label>
+            <input type="text" placeholder="Enter Full Name" name="fullname" required>
+
+            <label for="uname"><b>Username:</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw"><b>Re-enter Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>                          
+          </div>
+
+          <div class="container" id="lower_card_div" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('signupform').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button"  style="background-color: orange" class="cancelbtn">Reset</button>
+            <button type="submit" style="background-color: green" class="cancelbtn">Submit</button>
+            <!-- <button type="submit" class="submitbtn">Submit</button> -->
+          </div>
+        </form>
+    </div>     <!-- End of registration Form -->
