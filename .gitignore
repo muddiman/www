@@ -4,6 +4,6 @@
 django_project/settings.py
 **/*.pyc
 
-settings.py
+django_project/settings.py
 
 key.txt
