@@ -26,6 +26,7 @@ key.txt
 # roger
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 django_project/settings.py
 =======
 django_project/settings.py
@@ -34,3 +35,10 @@ django_project/settings.py
 django_project/settings.py
 >>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
 >>>>>>> bug-fix
+=======
+
+django_project/settings.py
+**/*.pyc
+
+key.txt
+>>>>>>> 74db4d78856e99f50916966c27e6b394c9778f7c
