@@ -1,0 +1,74 @@
+<<<<<<< HEAD
+<!--  Details of my programming projects  -->
+{% extends "base.html" %}
+
+{% block title %} Projects {% end block %}
+
+{% block content %}
+    <h2>Projects</h2>
+    <hr>
+    <h3>All Four Game</h3>
+    <p>
+        Popular Trinbago card game coded in HTML5 (and later in python using Pygame).
+    </p>
+ 
+    <h3>Einstein</h3>
+    <P>
+        Game of quick computation coded in HTML5.
+    </P>
+
+    <h3>This website</h3>
+    <p>Self Explanatory. Frontend coded in HTML5. Backend - python using the Django framework.</p>
+
+    <h3>Epanet skeletonizer</h3>
+    <p>
+        Water distribution me reducer coded in C.
+    </p>
+
+    <h3> Epanet Demand Allocator</h3>
+    <p>
+        Apply demands onto Junction Nodes in an Epanet .inp file. Coded in C.
+    </p>
+
+    <h3> Web & Mobile Dashboard/Control Center</h3>
+    <p>
+        look at stocks
+    </p>
+
+    
+
+    <h3>Arduino Project</h3>
+    <p>Written in C</p>
+
+    <h3>Raspberry Pi Project</h3>
+    <p>Written in python.</p>
+
+    <h3>Microcontroller Project</h3>
+    <p> Written in Assembly.</p>
+{% end block %}
+=======
+{% extends "pages/base.html" %}
+
+{% block header %}
+  <title> Roger's Projects</title>
+{% endblock header %}
+
+{% block content %}
+  <h1>Projects</h1>
+  <hr>
+<<<<<<< HEAD
+  <a href="{% url 'pages-new-page' %}"><h5>Mobile friendly website update</h5></a>
+  <a href="{% url 'pages-map' %}"><h5>w/mapping capabilities</h5></a>
+<<<<<<< HEAD
+{% endblock %}
+>>>>>>> bug-fix
+=======
+  {% include "pages/includes/contactform.html" %}
+  {% include "pages/includes/registerform.html" %}
+{% endblock %}
+>>>>>>> bug-fix
+=======
+  <a href="{% url 'pages-map' %}"><h5>Mapping Feature (mobile friendly)</h5></a>
+  {% include "pages/includes/contactform.html" %}
+{% endblock content %}
+>>>>>>> bug-fix

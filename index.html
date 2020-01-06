@@ -2,390 +2,20 @@
 <html>
 <!-- Landing Page -->
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
     <meta name="author" content=".muddicode" />
-    <link rel="stylesheet" type="text/css" href="{% static 'pages/css/style.css' %}">  
+    <link rel="stylesheet" type="text/css" href="www-style/index-style.css">  
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <style>
-      * {
-    box-sizing: border-box;
-    }
-    .head .container {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px;
-    border: none;
-    }
-    .head .container .row {
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        display: inline;
-        border: none;
-    }
-    #logo {
-    align-content: left;
-    color:#4CAF50;
-    font-family: cursive;
-    margin: 0;
-    padding-left: 10px;
-    padding-top: 0px;
-    border: none;
-    }
-    #logo H1 {
-    font-size: 8vmin;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    }
-    #motto {
-    align-content: right;
-    color:rgb(26, 28, 179);
-    padding: 0;
-    padding-right: 10px;
-    margin: 0;
-    border: none;
-    position: relative;
-    bottom: 0;
-    right: 0;
-    }
-    #motto H3 {
-        font-size: 4vmin;
-        text-align: right;
-        padding: 0;
-        margin: 0;
-        }
-    .topnav {
-    overflow: hidden;
-    background-color: #333;
-    margin-left: 0%;
-    margin-right: 0px;
-    }
-    #navbar {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    }
-    .topnav a {
-    float: left;
-    color: #f2f2f2;
-    display: block;
-    padding: 16px 14px;
-    text-decoration: none;
-    }
-    .topnav a:hover {
-    background-color: grey;
-    color: black;
-    }
-    .parallax {
-    background-image: url("http://static4.businessinsider.com/image/56b4b72d6e97c622048b51af-2190-1643/4653088356_e4b0de881c_o.jpg");
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    }
-    body {
-    background-color: rgb(255, 254, 251);
-    text-align: center;
-    margin: 0px;
-    font-family: Microsoft YaHei;
-    font-size: small;
-    }
-    body a {
-    text-decoration: none;
-    }
-    body a:hover {
-    color: #055813;
-    font-weight: bold;
-    }
-    #showcase {
-    color: #fff;
-    padding-top: 125px; 
-    }
-    #showcase button {
-    font-size: 3vmin;
-    font-weight: bold;
-    font-size: 20px;
-    width: 15%;
-    padding: 15px 32px;
-    color: yellow;
-    background:transparent;
-    border: 2px solid #4CAF50;
-    margin: 4px 2px;
-    border-radius: 12px;
     <Title>Good Morning</Title>
-    <meta name="viewport" content="width=device-width, initial scale=1.0" />
-    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <style>
-    body {
-        background-image: url('https://breathtakinglandscapes.files.wordpress.com/2013/02/breathtaking-landscapes-23-wallpapers-country-hills-2.jpg');
-        color: white;
-        font-family: "Microsoft YaHei UI Light",'Times New Roman', Times, serif;
-   }
-    #lock {
-        font-size: 200%;
-        position: fixed;
-        top: 0;
-        right: 0;
-        margin-top: 5%;
-        margin-right: 5%;
-        padding: 0;
-        color: white;
-        text-decoration: none;
-    }
-    #lock:hover {
-        color: green;
-    }
-    #greeting {
-        border-bottom: 5px solid white;
-        font-size: 5vw;
-        font-weight: 600;
-        width: 40%;
-        padding-bottom: 20px;
-        padding-top: 20px;
-        padding-left: 5%;
-        padding-right: 5%;
-        margin-top: 5%;
-        margin-left: 25%;
-        margin-right: 25%; 
-        text-align: center;
-        background-color: rgba(74, 76, 78, 0.596);
-        border-radius: 50px;
-    }
-    /* make the clock large */
-    #clockbox {
-        margin: 0;
-        font-family: monospace;
-        font-size: 12vw;
-        text-align: center;
-        width: 100%;
-        margin-top: 5%;
-        height: 100px;
-    }
-    #features .fa-3x {
-    color: green;
-    }
-    #features h3 {
-        color: green;
-        }
-    /* Media Queries for Small Screens */
-    .column {
-    float: left; 
-    padding: 0;
-    /* display: inline; */
-    }
-    /* for tablets, laptops and desktops */
-    .col-4 {width:33.3%;}
-    .col-6 {width: 50%;}
-    .col-12 {width:100%;}
-    /* for phones and small devices */
-    @media only screen and (max-width: 768px) {
-        /* For mobile phones: */
-        [class*="col-"] {
-
-    #socialmedia {
-        position: fixed;
-        bottom: 0;
-        left: 5px;
-        font-size: 35px;
-        color: white;
-    }
-    #socialmedia i {
-        color: white;
-    }
-    #datebox {
-        font-family: "Microsoft YaHei UI Light",'Times New Roman', Times, serif;
-        font-size: 35px;
-        font-weight: 600;
-        width: 75%;
-        text-align: right;
-        position: fixed;
-        bottom: 0;
-        right: 10px;
-    }
-    /* adjustments for mobile screens */
-    @media screen and (max-width: 650px) {
-        #greeting {
-            margin-top: 35%;
-            margin-left: 15%;
-            margin-right: 15%;
-            width: 60%; 
-            font-size: 8vw;
-        }
-        #clockbox {margin-top: 10%; font-weight: 900;}
-        #socialmedia {
-            font-size: 12vw;
-            width: 100%;
-            text-align: center;
-            
-        }
-        #datebox {
-            font-size: 5vw;
-            top: 0;
-            left: 5px;
-        }
-    }
-
-    /* Full-width input fields */
-    input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-
-    /* Set a style for all buttons */
-    button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-    }
-
-    /* styling for login form */
-    /* Extra styles for the cancel button */
-    .cancelbtn {
-        width: auto;
-        padding: 10px 18px;
-        background-color: #f44336;
-    }
-
-    /* Center the image and position the close button */
-    .imgcontainer {
-        text-align: center;
-        margin: 24px 5px 12px 5px;
-        position: relative;
-    }
-
-    img.avatar {
-        width: 40%;
-        border-radius: 50%;
-    }
-
-    .container {
-        padding: 16px;
-    }
-
-    span.psw {
-        float: right;
-        padding-top: 16px;
-    }
-
-    /* The Modal (background) */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        right: 0;
-        top: 0;
-        width: 400px; /* Full width */
-        height: 600px; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-left: 80px;
-        color: black;
-    }
-
-    /* Modal Content/Box */
-    .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-        height: 85%;
-    }
-    .modal-content p {
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-    /* The Close Button (x) */
-    .close {
-        position: absolute;
-        right: 25px;
-        top: 0;
-        color: #000;
-        font-size: 35px;
-        font-weight: bold;
-    }
-    label {
-        text-align: left;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: red;
-        cursor: pointer;
-    }
-
-    /* Add Zoom Animation */
-    .animate {
-        -webkit-animation: animatezoom 0.6s;
-        animation: animatezoom 0.6s
-    }
-
-    @-webkit-keyframes animatezoom {
-        from {-webkit-transform: scale(0)} 
-        to {-webkit-transform: scale(1)}
-    }
-        
-    @keyframes animatezoom {
-        from {transform: scale(0)} 
-        to {transform: scale(1)}
-    }
-
-    /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
-        span.psw {
-        display: block;
-        float: none;
-        }
-        .cancelbtn {
-        width: 100%;
-        }
-    }
-    </style>
-    <script>
-        var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-        var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
-
-        function GetClock(){
-            var d=new Date();
-            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
-            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
-            var greet="";
-
-            if(nhour==0){ap=" AM";nhour=12;}
-            else if(nhour<12){ap=" AM";}
-            else if(nhour==12){ap=" PM";}
-            else if(nhour>12){ap=" PM";nhour-=12;}
-
-            if(ap===" AM"){greet="Morning";} 
-            if (ap===" PM") {greet="Day";}
-
-            if(nmin<=9) nmin="0"+nmin; // put zeros in front of single digit numbers
-            if(nsec<=9) nsec="0"+nsec;
-
-<<<<<<< HEAD
-<body>    
+    <!-- <meta name="viewport" content="width=device-width, initial scale=1.0" /> -->
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" media="screen" /> -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+    <SCRIPT type="text/javascript" src="www-script/index-script.js"></SCRIPT>
+</HEAD>  
+    <body>    
     <div class="head">
-<<<<<<< HEAD
         <div class="container" id="head-contaner">
             <div class="row">
                 <div class="column col-12" id=logo>
@@ -394,23 +24,21 @@
             </div>
         </div>
         <div class="topnav sticky" id="navbar">
-                <a href="https://www.roger-clarke.com">Home</a>
-                <a href="/pages/about.html">About</a>
-                <a href="/blog/blog.html">Blog</a>
-                <a href="/pages/projects.html">Projects</a>
-                <a href="/pages/contact.html">Contact</a>
+                <a href="/">Home</a>
+                <a href="www-pages/about.html">About</a>
+                <a href="www-pages/blog.html">Blog</a>
+                <a href="www-pages/projects.html">Projects</a>
+                <a href="www-pages/contact.html">Contact</a>
                 <a href="#" style="float:right">Register</a>
                 <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
-=======
         <div class="topnav" id="navbar">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'pages-about' %}">About</a>
-            <a href="{% url 'blog-home' %}">Blog</a>
-            <a href="{% url 'pages-projects' %}">Projects</a>
+            <a href="/">Home</a>
+            <a href="www-pages/about.html">About</a>
+            <a href="www-pages/blog.html">Blog</a>
+            <a href="www-pages/projects.html>Projects</a>
             <a href="#" id="contact" onclick="loginForm()">Contact</a>
             <a href="#" style="float:right" id="signup" onclick="loginForm()">Register</a>
             <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
->>>>>>> bug-fix
         </div>
     </div> <!--End of header div-->
       
@@ -420,7 +48,7 @@
 <H1>ROGER CLARKE</H1>
     <section id="parallax">
         <div class="main">
-            <div class="parallax" style="background-image: url('{% static "pages/img/css-code.jpg" %}')">
+            <div class="parallax">
                 <div class="container" id="showcase">
                     <div class="row">
                         <div class="col-12">
@@ -432,20 +60,17 @@
                     </div> 
                 </div>
                 <div class="container" id="showcase">
-<<<<<<< HEAD
                         <div class="row">
                             <div class="col-12">
                                 <div class="caption">
                                     <H2>Follow me on my coding journey!</H2>
                                     <button onclick="#features">See More</button>
                                 </div>
-=======
                     <div class="row">
                         <div class="col-12">
                             <div class="caption">
                                 <H2>Welcome to my coding journey!</H2>
                                 <button onclick="#features">See More</button>
->>>>>>> bug-fix
                             </div>
                         </div>
                     </div> 
@@ -486,38 +111,8 @@
         </div>
     </section>
  </section>
-    
-=======
-<<<<<<< HEAD
-=======
-        function GetClock(){
-            var d=new Date();
-            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
-            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
-            var greet="";
 
-            if(nhour==0){ap=" AM";nhour=12;}
-            else if(nhour<12){ap=" AM";}
-            else if(nhour==12){ap=" PM";}
-            else if(nhour>12){ap=" PM";nhour-=12;}
->>>>>>> bug-fix
-
-            if(ap===" AM"){greet="Morning";} 
-            if (ap===" PM") {greet="Day";}
-
-            if(nmin<=9) nmin="0"+nmin; // put zeros in front of single digit numbers
-            if(nsec<=9) nsec="0"+nsec;
-
->>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
-            var clocktext= ""+nhour+":"+nmin+":"+nsec+ap+"";
-            var datetext = ""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
-            var mygreeting = "Good " + greet + ", Roger.";
-            document.getElementById('datebox').innerHTML=datetext;
-            document.getElementById('clockbox').innerHTML=clocktext;
-            document.getElementById('greeting').innerHTML=mygreeting;
-
-            var t = setTimeout(GetClock, 500);
-        }
+    <script>
         GetClock();
     </script>
     </head>
@@ -534,10 +129,7 @@
       <a href="https://www.github.com/muddiman"><i class="fab fa-github"></i></a>
     </div>
     <div id="datebox"></div>
-<<<<<<< HEAD
->>>>>>> bug-fix
-=======
->>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
+
     <!-- Log In Form -->
     <div id="loginform" class="modal"> 
         <form class="modal-content animate" method="POST">
@@ -563,16 +155,9 @@
             <span class="psw">Forgot <a href="#">password?</a></span>
           </div>
         </form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
+
     </div>
-=======
->>>>>>> bug-fix
     </div> <!--End of Main div-->
-<<<<<<< HEAD
     
     <section id="links">
         <div class="container">
@@ -618,48 +203,15 @@
             </p>
         </div>
         <div>
-            <p>Copyright &copy; 2018. All Rights Reserved. me@roger-clarke.com</p>
+            <p>Copyright &copy; 2018 - 2020. All Rights Reserved. me@roger-clarke.com</p>
         </div>
     </footer>
     
     
-=======
+
 
     <!-- Contact Me Form -->
     <!-- Registration Form -->
->>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
-=======
     </div>     <!-- End of Log In Form -->
->>>>>>> bug-fix
-
-    <script>   
-        function unlock() {
-            if(document.getElementById('loginform').style.display ==='none'){
-                document.getElementById('lock').classList.toggle('fa-lock');
-            } else {
-                document.getElementById('lock').classList.toggle('fa-lock-open');
-            } 
-        }
-
-        function clickOutsideForm() {
-            var modal = document.getElementById('loginform');
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            };
-        }
-
-        function loginForm() {
-            unlock();
-            var modal = document.getElementById('loginform');
-            modal.style.display = 'block';
-            clickOutsideForm();
-        }
-    </script>
-<<<<<<< HEAD
->>>>>>> bug-fix
-=======
->>>>>>> 8296dbe1d38a720ecd962bcc3809ea15d06090d6
 </body>
 </html>

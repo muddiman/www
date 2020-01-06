@@ -1,8 +1,10 @@
+<<<<<<< HEAD
 <!--  Short autobiographical page  -->
-<!-- {% extends "base.html" %} -->
+{% extends "base.html" %}
 
-<TITLE>About Me</TITLE>
+{% block title %} About Me {% end block %}
 
+{% block content %}
     <h2>About Me</h2>
     <hr>
     <p>
@@ -11,10 +13,15 @@
         Computer Programming - C/C++, Java, HTML5 (HTML, CSS, Javascript) & Python. <br/>
     </p>
 
+{% end block %}
+=======
+{% extends "pages/base.html" %}
 
-
+{% block header %}
    <TITLE>Roger Clarke - About Me</TITLE>
+{% endblock header %}
 
+{% block content %}
 <section id="baby">
   <h1>About Me</h1>
   <hr>
