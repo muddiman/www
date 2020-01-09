@@ -1,10 +1,39 @@
-<<<<<<< HEAD
-<!--  Short autobiographical page  -->
-{% extends "base.html" %}
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Short autobiographical page">
+    <meta name="author" content=".muddicode" />
+    <link rel="stylesheet" type="text/css" href="../www-style/index-style.css">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+ 
+  <title>About Roger</title>
+</HEAD>
+<BODY>
+    <!--                ******the Navbar section******           -->   
+    <div class="head">
+        <!-- <div class="container" id="head-contaner">
+            <div class="row">
+                <div class="column col-12" id=logo>
+                    <h1><span style="color:#f44336">Roger</span> Clarke</h1>
+                </div>
+            </div>
+        </div> -->
+        <div class="topnav sticky" id="navbar">
+          <a href="/">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">About Me</a>
+          <a href="contact.html">Contact Me</a>
+          <a href="#" style="float:right">Register</a>
+          <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
+        </div> 
+    </div> <!--End of header div-->
 
-{% block title %} About Me {% end block %}
 
-{% block content %}
+    <!--                ******the main section******           -->   
+
     <h2>About Me</h2>
     <hr>
     <p>
@@ -13,15 +42,6 @@
         Computer Programming - C/C++, Java, HTML5 (HTML, CSS, Javascript) & Python. <br/>
     </p>
 
-{% end block %}
-=======
-{% extends "pages/base.html" %}
-
-{% block header %}
-   <TITLE>Roger Clarke - About Me</TITLE>
-{% endblock header %}
-
-{% block content %}
 <section id="baby">
   <h1>About Me</h1>
   <hr>
@@ -44,15 +64,15 @@
   Currently, I code strictly for fun. This will change in the future because I have grown to love programming so much, that it consumes most of my time.
   It may be best for me to focus on programming exclusively as a career.</p>
 </section>
-<<<<<<< HEAD
-{% endblock content %}
->>>>>>> bug-fix
-=======
-{% include "pages/includes/contactform.html" %}
-<<<<<<< HEAD
-{% include "pages/includes/registerform.html" %}
-{% endblock content %}
->>>>>>> bug-fix
-=======
-{% endblock content %}
->>>>>>> bug-fix
+<footer>
+  <div class="container legal">
+      <p>
+          <a href="#">Privacy</a> | <a href="#">Terms and Conditions</a>
+      </p>
+  </div>
+  <div class="Copyright">
+      <p>Copyright &copy; 2018 - 2020. All Rights Reserved. me@roger-clarke.com</p>
+  </div>
+</footer>
+</BODY>
+</HTML>

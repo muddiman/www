@@ -1,10 +1,41 @@
-<<<<<<< HEAD
-<!--  Details of my programming projects  -->
-{% extends "base.html" %}
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Engineer extraordinaire: Chemical, Civil/Environmental, Software">
+    <meta name="author" content=".muddicode" />
+    <link rel="stylesheet" type="text/css" href="../www-style/index-style.css">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+ 
+  <title> Roger's Projects</title>
+</HEAD>
 
-{% block title %} Projects {% end block %}
 
-{% block content %}
+<BODY>
+    <!--                ******the Navbar section******           -->   
+    <div class="head">
+        <!-- <div class="container" id="head-contaner">
+            <div class="row">
+                <div class="column col-12" id=logo>
+                    <h1><span style="color:#f44336">Roger</span> Clarke</h1>
+                </div>
+            </div>
+        </div> -->
+        <div class="topnav sticky" id="navbar">
+          <a href="/">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">About Me</a>
+          <a href="contact.html">Contact Me</a>
+          <a href="#" style="float:right">Register</a>
+          <a href="#" style="float:right" id="login" onclick="loginForm()">Log In</a>
+        </div> 
+    </div> <!--End of header div-->
+
+
+    <!--                ******the main section******           -->   
+    <section id="main_page">    
     <h2>Projects</h2>
     <hr>
     <h3>All Four Game</h3>
@@ -45,30 +76,25 @@
 
     <h3>Microcontroller Project</h3>
     <p> Written in Assembly.</p>
-{% end block %}
-=======
-{% extends "pages/base.html" %}
 
-{% block header %}
-  <title> Roger's Projects</title>
-{% endblock header %}
 
-{% block content %}
   <h1>Projects</h1>
   <hr>
-<<<<<<< HEAD
-  <a href="{% url 'pages-new-page' %}"><h5>Mobile friendly website update</h5></a>
-  <a href="{% url 'pages-map' %}"><h5>w/mapping capabilities</h5></a>
-<<<<<<< HEAD
-{% endblock %}
->>>>>>> bug-fix
-=======
-  {% include "pages/includes/contactform.html" %}
-  {% include "pages/includes/registerform.html" %}
-{% endblock %}
->>>>>>> bug-fix
-=======
-  <a href="{% url 'pages-map' %}"><h5>Mapping Feature (mobile friendly)</h5></a>
-  {% include "pages/includes/contactform.html" %}
-{% endblock content %}
->>>>>>> bug-fix
+  <a href="#"><h5>Mobile friendly website update</h5></a>
+  <a href="#"><h5>w/mapping capabilities</h5></a>
+
+
+  <a href="#"><h5>Mapping Feature (mobile friendly)</h5></a>
+  <footer>
+    <div class="container legal">
+        <p>
+            <a href="#">Privacy</a> | <a href="#">Terms and Conditions</a>
+        </p>
+    </div>
+    <div class="Copyright">
+        <p>Copyright &copy; 2018 - 2020. All Rights Reserved. me@roger-clarke.com</p>
+    </div>
+  </footer>
+
+</BODY>
+</HTML>

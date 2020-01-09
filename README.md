@@ -1,17 +1,10 @@
-WWW
+# HTTP://WWW.ROGER-CLARKE.COM
 ======
-### A Django project
-Serving static pages and a blog. User authentication available.
+### A Django --> Static Website Conversion project
+Serving static pages and links to any dynamic content to be handled by different servers/platforms. User authentication available.
 
-#### VERSION: 1.3.1
+#### VERSION: 2.0.1
 ------
-First patch.
+First iteration.
 Known bugs:
-    templates not loading
-    django cannot open static files 
-    administration of page non-functional 
- 2nd Bug-fix patch.
- Fixed the above but a work-around was used instead of static files
- after much fratration reading forum posts and still not getting static files to work,
- i decided to move ahead and finish the website's features and fix that bug on a later date.
- Known bugs:
+    rearraging file structure in AWS S3 service caused file-link mismatches 
